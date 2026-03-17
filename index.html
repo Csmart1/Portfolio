@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godslove | Creative Graphics Designer & Social Media Strategist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --accent: #00f5ff;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .neon-text {
+            text-shadow: 0 0 15px var(--accent), 0 0 30px var(--accent);
+        }
+
+        .portfolio-card {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgb(0 245 255 / 0.3);
+        }
+
+        .section-header:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent), transparent);
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .signature {
+            font-family: 'Playfair Display', cursive;
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+            color: var(--accent);
+            text-shadow: 0 0 20px var(--accent);
+        }
+
+        /* --- NEW ANIMATION CSS --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered delays for grid items */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00f5ff] to-purple-600 flex items-center justify-center text-black font-bold text-2xl shadow-lg">G</div>
+                <span class="text-2xl font-bold tracking-tight">Godslove</span>
+            </div>
+
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-[var(--accent)] transition">About</a>
+                <a href="#services" class="hover:text-[var(--accent)] transition">Services</a>
+                <a href="#portfolio" class="hover:text-[var(--accent)] transition">Work</a>
+                <a href="#contact" class="hover:text-[var(--accent)] transition">Contact</a>
+            </div>
+
+            <a href="#contact" class="px-6 py-3 rounded-xl border border-[var(--accent)]/60 hover:border-[var(--accent)] text-[var(--accent)] text-sm font-medium flex items-center gap-x-2 transition hover:bg-[var(--accent)]/10">
+                <i class="fas fa-envelope"></i> Hire Me
+            </a>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-bg min-h-screen flex items-center pt-24 relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8 reveal">
+                <h1 class="text-7xl md:text-8xl font-bold heading-font tracking-tighter neon-text">
+                    GODSLOVE
+                </h1>
+                <div class="text-3xl text-[var(--accent)] font-light">
+                    Creative Graphics Designer<br>& Social Media Strategist
+                </div>
+                <p class="text-lg text-gray-300 max-w-lg">
+                    Crafting bold visuals that inspire faith, drive immigration dreams, win elections, and boost product sales across Nigeria and beyond.
+                </p>
+                <div class="flex gap-4 flex-wrap">
+                    <a href="#portfolio" class="px-8 py-4 bg-[var(--accent)] text-black font-bold rounded-xl hover:bg-white transition flex items-center gap-2">
+                        VIEW PROJECTS <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="px-8 py-4 border border-white/60 rounded-xl hover:border-[var(--accent)] transition">
+                        GET IN TOUCH
+                    </a>
+                </div>
+                <div class="pt-6 signature">— Godslove</div>
+            </div>
+
+            <div class="relative flex justify-center reveal delay-200">
+                <div class="w-80 md:w-96 relative">
+                    <div class="absolute -inset-8 bg-gradient-to-br from-[var(--accent)] via-purple-600 to-pink-500 rounded-full opacity-30 blur-3xl animate-pulse"></div>
+                    <img src="https://assets.vogue.com/photos/5b847dfb61535124b21bc7f3/16:9/w_1280,c_limit/00-social-streetstyle-100-baingor-joiner.jpg" 
+                         alt="Godslove - Creative Designer Portrait" class="rounded-3xl shadow-2xl border-4 border-white/10 relative z-10 object-cover h-[500px] w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-zinc-950 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 reveal">
+            <div class="section-header mb-8 relative inline-block">
+                <span class="text-[var(--accent)] text-sm tracking-widest">ABOUT ME</span>
+                <h2 class="text-5xl heading-font font-bold mt-2">Visual Stories That Convert</h2>
+            </div>
+            <p class="text-lg text-gray-300 max-w-3xl">
+                Passionate about blending faith-inspired design with high-impact marketing. From powerful church flyers for ministries like Dominion Anshalom, to immigration branding for Divine Immigration, political campaign materials that rally support, and product promos that drive sales — I create visuals that connect emotionally and deliver results.
+            </p>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-black overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-5xl heading-font font-bold mb-12 reveal">My Core Services</h2>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="glass p-8 rounded-3xl hover:border-[var(--accent)]/50 transition reveal">
+                    <i class="fas fa-church text-5xl text-[var(--accent)] mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Church Flyers & Event Branding</h3>
+                    <p class="text-gray-400">Inspiring revival posters, crusade graphics, ministry promotions.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl hover:border-[var(--accent)]/50 transition reveal delay-100">
+                    <i class="fas fa-passport text-5xl text-[var(--accent)] mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Immigration & Visa Designs</h3>
+                    <p class="text-gray-400">Professional flyers, social ads, and branding for visa/relocation services.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl hover:border-[var(--accent)]/50 transition reveal delay-200">
+                    <i class="fas fa-vote-yea text-5xl text-[var(--accent)] mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Political Campaign Materials</h3>
+                    <p class="text-gray-400">Posters, banners, social graphics that win hearts and votes.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl hover:border-[var(--accent)]/50 transition reveal delay-300">
+                    <i class="fas fa-shopping-cart text-5xl text-[var(--accent)] mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Product & Business Branding</h3>
+                    <p class="text-gray-400">Promotional flyers, social media content, packaging visuals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-zinc-950 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl heading-font font-bold mb-12 text-center reveal">Featured Projects</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="portfolio-card glass rounded-3xl overflow-hidden reveal">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/d4f10e240963137.694a8f2487acf.jpg" 
+                         alt="Modern Church Revival Flyer" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">Church Revival & Prophetic Nights</h3>
+                        <p class="text-gray-400 text-sm">Vibrant, high-energy designs for ministries like Dominion Anshalom</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card glass rounded-3xl overflow-hidden reveal delay-100">
+                    <img src="https://cdn.dribbble.com/userupload/37858724/file/original-115d685928788998c3aff05a03d8e5d7.jpg?resize=1600x1200" 
+                         alt="Political Campaign Poster" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">Election & Political Branding</h3>
+                        <p class="text-gray-400 text-sm">PDP-style posters, manifestos, rally graphics</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card glass rounded-3xl overflow-hidden reveal delay-200">
+                    <img src="https://marketplace.canva.com/EAGSBoLDSfY/1/0/1600w/canva-red-and-white-modern-immigration-counseling-facebook-ad-eUgXnu55FG4.jpg" 
+                         alt="Immigration Services Flyer" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">Divine Immigration Branding</h3>
+                        <p class="text-gray-400 text-sm">Visa counseling, Canada/US relocation promos</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card glass rounded-3xl overflow-hidden reveal">
+                    <img src="https://as2.ftcdn.net/v2/jpg/09/86/02/93/1000_F_986029348_ZheJUtB3WZok4FPHbXnvYiipF7Mx2R9R.jpg" 
+                         alt="Product Promotional Flyer" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">Beauty & Product Promotions</h3>
+                        <p class="text-gray-400 text-sm">Skincare, fashion, business launch graphics</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card glass rounded-3xl overflow-hidden reveal delay-100">
+                    <img src="https://i.pinimg.com/736x/8b/1d/c1/8b1dc11aaf0951b6522ad14117c7f3a9.jpg" 
+                         alt="Church Event Poster" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">Gospel Programs & Crusades</h3>
+                        <p class="text-gray-400 text-sm">Bold, faith-centered event visuals</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card glass rounded-3xl overflow-hidden reveal delay-200">
+                    <img src="https://hazken.com/assets/images/bg/political-campaigns-print.jpg" 
+                         alt="Political Print Campaign" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">Multi-Format Political Materials</h3>
+                        <p class="text-gray-400 text-sm">Banners, fans, stickers, posters</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-black border-t border-white/10 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div class="reveal">
+                <h2 class="text-5xl heading-font font-bold mb-8">Let's Build Something Powerful</h2>
+                <p class="text-xl text-gray-300 mb-12">
+                    Ready for your next church event, immigration campaign, political push, or product launch? Let's talk.
+                </p>
+
+                <div class="space-y-8 text-lg">
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-phone text-4xl text-[var(--accent)]"></i>
+                        <div>
+                            <div class="text-gray-400 text-sm">Phone / WhatsApp</div>
+                            <a href="https://wa.me/2349076167358" class="hover:text-[var(--accent)] transition">+234 907 616 7358</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-envelope text-4xl text-[var(--accent)]"></i>
+                        <div>
+                            <div class="text-gray-400 text-sm">Email</div>
+                            <a href="mailto:godsloveagbadaola@gmail.com" class="hover:text-[var(--accent)] transition">godsloveagbadaola@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fab fa-instagram text-4xl text-[var(--accent)]"></i>
+                        <div>
+                            <div class="text-gray-400 text-sm">Instagram</div>
+                            <a href="https://instagram.com/ib_kintan" class="hover:text-[var(--accent)] transition">@ib_kintan</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fab fa-facebook text-4xl text-[var(--accent)]"></i>
+                        <div>
+                            <div class="text-gray-400 text-sm">Facebook</div>
+                            <div>Ibukun Agbadaola</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fab fa-x-twitter text-4xl text-[var(--accent)]"></i>
+                        <div>
+                            <div class="text-gray-400 text-sm">X (Twitter)</div>
+                            <a href="https://x.com/i_ibkintan" class="hover:text-[var(--accent)] transition">@i_ibkintan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-10 reveal delay-200">
+                <form class="space-y-6">
+                    <input type="text" placeholder="Your Name" class="w-full bg-transparent border border-white/30 rounded-xl px-6 py-4 focus:border-[var(--accent)] outline-none transition">
+                    <input type="email" placeholder="Email Address" class="w-full bg-transparent border border-white/30 rounded-xl px-6 py-4 focus:border-[var(--accent)] outline-none transition">
+                    <input type="text" placeholder="Project Type (e.g. Church Flyer, Political Poster)" class="w-full bg-transparent border border-white/30 rounded-xl px-6 py-4 focus:border-[var(--accent)] outline-none transition">
+                    <textarea placeholder="Tell me about your vision..." rows="5" class="w-full bg-transparent border border-white/30 rounded-xl px-6 py-4 focus:border-[var(--accent)] outline-none resize-none transition"></textarea>
+                    <button type="submit" class="w-full py-5 bg-[var(--accent)] text-black font-bold rounded-xl hover:bg-white transition">
+                        SEND MESSAGE <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black text-center text-gray-500 border-t border-white/10">
+        © 2026 Godslove • Lagos, Nigeria • Designed with passion & neon
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // --- NEW ANIMATION SCRIPT ---
+        // 1. Select all elements that have the 'reveal' class
+        const revealElements = document.querySelectorAll('.reveal');
+
+        // 2. Define what happens when they enter the screen
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                // If the element is visible in the viewport...
+                if (entry.isIntersecting) {
+                    // Add the 'active' class to trigger the CSS animation
+                    entry.target.classList.add('active');
+                    // Stop observing it so the animation only happens once
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        // 3. Set up the observer options
+        const revealOptions = {
+            root: null, // use the browser viewport
+            threshold: 0.15, // trigger when 15% of the element is visible
+            rootMargin: "0px 0px -50px 0px" // Trigger slightly before it hits the bottom
+        };
+
+        // 4. Create the observer and apply it to our elements
+        const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
